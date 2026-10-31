@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SISTEMA BIBLIOTECARIO</title>
+    
+    <!-- CORREGIDO: Ruta al Bootstrap CSS Local -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    
+    <!-- CORREGIDO: Llamada exacta a tu estilo manual (estilo.css en singular) -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilo.css') }}">
+</head>
+<body>
+
+    <div class="container-fluid p-0">
+        <!-- Texto superior del plantel -->
+        <p class="bg-dark text-white text-center m-0 p-2 fw-bold text-uppercase">CECYTEMM, PLANTEL TENANGO DEL VALLE</p>
+        
+        <!-- Navbar principal de Bootstrap -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom px-3">
+            <div class="container-fluid">
+                <a class="navbar-brand fw-bold text-success" href="/Menuprincipal">BIBLIOTECA</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/Menuprincipal">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Libros">Libros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Empleados">Empleados</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2 form-control-sm" type="search" placeholder="Buscar libro..." aria-label="Search">
+                        <button class="btn btn-outline-success btn-sm" type="submit">Buscar</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Contenido dinámico de las páginas hijas (como libros.html) -->
+    <div class="container mt-3">
+        {% block body %}
+        {% endblock %}
+    </div>
+
+    <!-- CORREGIDO: Archivo Bootstrap JS Local para que funcionen los menús desplegables -->
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+</body>
+</html>

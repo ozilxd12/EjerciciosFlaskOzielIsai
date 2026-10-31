@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rentas Central - Panel de Administración</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Iconos externos para que se vea profesional -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+</head>
+<body>
+
+    <!-- MENÚ LATERAL (SIDEBAR) -->
+    <aside class="sidebar">
+        <div class="logo">
+            <i class="fa-solid fa-boxes-stacked"></i>
+            <h2>Rentas Central</h2>
+        </div>
+        <nav class="menu">
+            <a href="#" class="active"><i class="fa-solid fa-chart-pie"></i> Resumen</a>
+            <a href="#"><i class="fa-solid fa-boxes-flat"></i> Catálogo</a>
+            <a href="#"><i class="fa-solid fa-handshake"></i> Rentas</a>
+            <a href="#"><i class="fa-solid fa-users"></i> Clientes</a>
+            <a href="#"><i class="fa-solid fa-gears"></i> Configuración</a>
+        </nav>
+        <div class="user-profile">
+            <i class="fa-solid fa-circle-user"></i>
+            <span>Administrador</span>
+        </div>
+    </aside>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main-content">
+        <!-- Encabezado -->
+        <header class="header">
+            <div class="welcome-text">
+                <h1>Cada artículo, una nueva solución.</h1>
+                <p>Monitorea las rentas de tus productos del día de hoy.</p>
+            </div>
+            <button class="btn-primary"><i class="fa-solid fa-plus"></i> Nueva renta</button>
+        </header>
+
+        <!-- TARJETAS DE MÉTRICAS (GRID DE 4) -->
+        <section class="metrics-grid">
+            <div class="card-metric">
+                <h3>Artículos Rentados</h3>
+                <p class="number">12,480</p>
+                <span class="subtext">En manos de clientes</span>
+            </div>
+            <div class="card-metric">
+                <h3>Disponibles</h3>
+                <p class="number">248</p>
+                <span class="subtext">Listos en almacén</span>
+            </div>
+            <div class="card-metric">
+                <h3>En Mantenimiento</h3>
+                <p class="number">36</p>
+                <span class="subtext">Requieren revisión</span>
+            </div>
+            <div class="card-metric">
+                <h3>Próximas Devoluciones</h3>
+                <p class="number">18</p>
+                <span class="subtext">Vencen pronto</span>
+            </div>
+        </section>
+
+        <!-- SECCIÓN INTERMEDIA: TABLA Y CALENDARIO -->
+        <div class="data-section">
+            <!-- Tabla de Rentas Recientes -->
+            <div class="table-container">
+                <h2>Rentas recientes</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Artículo Rentado</th>
+                            <th>Cliente</th>
+                            <th>Fecha de Salida</th>
+                            <th>Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Taladro Rotomartillo Profesional</td>
+                            <td>Lucía Fernández</td>
+                            <td>12 Oct 2026</td>
+                            <td><span class="status entregado">Entregado</span></td>
+                        </tr>
+                        <tr>
+                            <td>Proyector HD + Pantalla</td>
+                            <td>Diego Torres</td>
+                            <td>11 Oct 2026</td>
+                            <td><span class="status pendiente">Pendiente</span></td>
+                        </tr>
+                        <tr>
+                            <td>Inflable Castillo Gigante</td>
+                            <td>Felipe Moreno</td>
+                            <td>10 Oct 2026</td>
+                            <td><span class="status retrasado">Retrasado</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Panel Lateral de Resumen Corto -->
+            <div class="summary-box">
+                <h3>Todo listo para rentar</h3>
+                <div class="summary-item"><strong>12</strong> Disponibles hoy</div>
+                <div class="summary-item"><strong>07</strong> Entregas pendientes</div>
+                <div class="summary-item"><strong>04</strong> En revisión técnica</div>
+                <div class="total-box">
+                    <span>ID del Turno:</span>
+                    <strong>1,286</strong>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECCIÓN INFERIOR: EN NUESTRAS ESTANTERÍAS -->
+        <section class="catalog-section">
+            <h2>En nuestras estanterías</h2>
+            <div class="catalog-grid">
+                <!-- Artículo 1 -->
+                <div class="product-card">
+                    <div class="product-image"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                    <h4>Kit de Herramientas</h4>
+                    <span class="tag disponible">Disponible</span>
+                </div>
+                <!-- Artículo 2 -->
+                <div class="product-card">
+                    <div class="product-image"><i class="fa-solid fa-camera"></i></div>
+                    <h4>Cámara Fotográfica</h4>
+                    <span class="tag disponible">Disponible</span>
+                </div>
+                <!-- Artículo 3 -->
+                <div class="product-card">
+                    <div class="fa-solid fa-speaker-group product-image"><i class="fa-solid fa-volume-high"></i></div>
+                    <h4>Bocina Amplificada</h4>
+                    <span class="tag disponible">Disponible</span>
+                </div>
+                <!-- Artículo 4 -->
+                <div class="product-card">
+                    <div class="product-image"><i class="fa-solid fa-campground"></i></div>
+                    <h4>Toldo para Eventos</h4>
+                    <span class="tag disponible">Disponible</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

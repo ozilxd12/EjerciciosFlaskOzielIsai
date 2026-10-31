@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paisaje 1</title>
+    <!-- Enlace Local a Bootstrap -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
+</head>
+<body class="container mt-4 text-center">
+
+    <div class="card d-inline-block p-3 shadow">
+        <img src="{{ url_for('static', filename='imagenes/Paisaje1.jpg') }}" width="300" height="300" class="img-fluid rounded mb-3" alt="Hermoso Paisaje 1">
+        <br>
+        <a href="/" class="btn btn-success w-100">Regresar</a>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="row p-4 m-3 container bg-success border border-white text-white rounded">
+    <h1>Sistema de seguimiento de proyectos escolares</h1>
+    <p class="lead">Bienvenido a la primera versión web del sistema.</p>
+    <div class="d-grid gap-2 d-md-block mt-3">
+        <a href="{{ url_for('Libros') }}" class="btn btn-light me-2">Registrar Libros</a>
+        <a href="{{ url_for('Empleados') }}" class="btn btn-light">Registrar Empleados</a>
+    </div>
+</div>
+{% endblock %}

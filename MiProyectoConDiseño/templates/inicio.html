@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paisajes</title>
+    <!-- Mapeo local de Bootstrap CSS desde tu carpeta static -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
+</head>
+<body>
+    <div class="container text-white text-center mt-3">
+        <!-- Barra Azul del Título -->
+        <div class="bg-primary p-4 rounded-top">
+            <h1>Paisajes del mundo entero</h1>
+            <p class="mb-0">Bienvenido.</p>
+        </div>
+        
+        <!-- Contenedor de los Botones de Colores -->
+        <div class="bg-white p-4 border rounded-bottom d-flex flex-column gap-2">
+            <a href="/Paisaje1" class="btn btn-success d-block py-2">Ir a Paisaje1</a>
+            <a href="/Paisaje2" class="btn btn-danger d-block py-2">Ir a Paisaje2</a>
+            <a href="/Paisaje3" class="btn btn-warning text-dark d-block py-2">Ir a Paisaje3</a>
+        </div>
+    </div>
+
+    <!-- Mapeo local de Bootstrap JS por si usas componentes interactivos -->
+    <script src="{{ url_for('static', filename='bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+</body>
+</html>
